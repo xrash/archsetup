@@ -1,0 +1,5 @@
+PS1="[\u@\h \w]\\$ "
+
+export VISUAL='emacs -nw'
+export EDITOR='emacs -nw'
+alias emacs='emacs -nw'

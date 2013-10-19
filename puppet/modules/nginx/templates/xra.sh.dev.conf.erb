@@ -1,0 +1,18 @@
+server {
+    listen 80;
+    server_name xra.sh.dev;
+    root /home/<%= @username %>/xra.sh.dev/pub;
+    index index.html;
+    gzip on;
+
+    location / {
+        index        index.html;
+        try_files    $uri =404;
+        error_page   404 = @app;
+    }
+
+    location @app {
+        include         fastcgi.conf;
+        fastcgi_pass    127.0.0.1:9001;
+    }
+}

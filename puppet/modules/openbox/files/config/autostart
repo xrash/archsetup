@@ -1,0 +1,3 @@
+# WALLPAPER
+nitrogen --restore &
+echo "welcome back commander" | flite &
