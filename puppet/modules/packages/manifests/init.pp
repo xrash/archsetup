@@ -7,7 +7,7 @@ class packages {
   }
 
   exec { 'yaourt':
-    command => 'yaourt -Sy --noconfirm copy-agent flite gruler ttf-google-fonts-git',
+    command => 'yaourt -Sy --noconfirm copy-agent flite gruler',
     timeout => 2400,
     require => Exec['pacman'],
   }
