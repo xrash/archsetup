@@ -30,3 +30,4 @@ After that, you should manually get your graphics card driver running. Tips from
 
     ln -s /etc/fonts/conf.avail/70-no-bitmaps.conf /etc/fonts/conf.d/
 
+- Add the switch-keyboard-layout script to easily switch from br to us.
