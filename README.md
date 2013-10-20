@@ -1,16 +1,16 @@
 # My Arch Linux automatic setup
 
-After a proper Arch Linux install with internet connection up, install packages _git_ and _openssh_:
+After a proper Arch Linux install with internet connection up, install packages *git* and *openssh*:
 
     pacman -S --noconfirm git openssh
 
-Now, run as user _root_ at _/root_:
+Now, run as user *root* at */root*:
 
     git clone https://github.com/xrash/archsetup.git
 	cd archsetup
 	./install.sh
 
-This will manually install _yaourt_ and _puppet_. Then it will apply the puppet manifests.
+This will manually install *yaourt* and *puppet*. Then it will apply the puppet manifests.
 
 After that, you should manually get your graphics card driver running. Tips from the Arch Wiki:
 
@@ -20,8 +20,8 @@ After that, you should manually get your graphics card driver running. Tips from
 
 # TODO
 
-- Remove the noconfirm option from /etc/yaourtrc after it's not needed anymore.
-- Unmute alsa mixer (requires alsa-utils which will be installed by the packages manifest):
+- Remove the noconfirm option from */etc/yaourtrc* after it's not needed anymore.
+- Unmute alsa mixer (requires *alsa-utils* which will be installed by the packages manifest):
 
     amixer set Master unmute
 	amixer set Master 100
@@ -31,3 +31,7 @@ After that, you should manually get your graphics card driver running. Tips from
     ln -s /etc/fonts/conf.avail/70-no-bitmaps.conf /etc/fonts/conf.d/
 
 - Add the switch-keyboard-layout script to easily switch from br to us.
+- Add the http group to *$username* and symlink */var/www* to */home/$username/www*:
+
+    usermod $username -a -G http
+    ln -s /var/www /home/$username/www
