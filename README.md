@@ -14,24 +14,24 @@ This will manually install **yaourt** and **puppet**. Then it will apply the pup
 
 After that, you should manually get your graphics card driver running. Tips from the Arch Wiki:
 
-    lspci | grep VGA
-	pacman -Ss xf86-video | less
-	pacman -S xf86-video-vesa
+        lspci | grep VGA
+        pacman -Ss xf86-video | less
+        pacman -S xf86-video-vesa
 
 # TODO
 
 - Remove the noconfirm option from **/etc/yaourtrc** after it's not needed anymore.
 - Unmute alsa mixer (requires **alsa-utils** which will be installed by the packages manifest):
 
-    amixer set Master unmute
-	amixer set Master 100
+        amixer set Master unmute
+	    amixer set Master 100
 
 - Disable bitmap fonts for X (bitmap fonts are ugly):
 
-    ln -s /etc/fonts/conf.avail/70-no-bitmaps.conf /etc/fonts/conf.d/
+        ln -s /etc/fonts/conf.avail/70-no-bitmaps.conf /etc/fonts/conf.d/
 
 - Add the switch-keyboard-layout script to easily switch from br to us.
 - Add the http group to **$username** and symlink **/var/www** to **/home/$username/www**:
 
-    usermod $username -a -G http
-    ln -s /var/www /home/$username/www
+        usermod $username -a -G http
+        ln -s /var/www /home/$username/www
