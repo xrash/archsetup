@@ -34,3 +34,5 @@ After that, you should manually get your graphics card driver running. Tips from
 
         usermod $username -a -G http
         ln -s /var/www /home/$username/www
+
+- Add the LOTGH fortune file :D
