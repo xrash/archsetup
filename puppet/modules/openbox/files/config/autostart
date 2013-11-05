@@ -1,3 +1,4 @@
 # WALLPAPER
+/usr/lib/notify-osd/notify-osd &
 nitrogen --restore &
 echo "welcome back commander" | flite &
