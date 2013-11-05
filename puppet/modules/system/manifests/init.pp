@@ -27,4 +27,12 @@ class system {
     target  => '/root/.bashrc',
     require => File['/root/.bashrc'],
   }
+
+  file { '/usr/local/bin/switch-keyboard-layout':
+    ensure => 'present',
+    owner  => 'root',
+    group  => 'root',
+    mode   => 0755,
+    source => 'puppet:///modules/system/switch-keyboard-layout',
+  }
 }

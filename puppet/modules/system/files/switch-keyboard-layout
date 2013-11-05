@@ -1,0 +1,11 @@
+#!/bin/sh
+ISBR=$(setxkbmap -query | grep layout | grep br | wc -l)
+
+if [ $ISBR -eq 1 ]
+then
+    setxkbmap us
+    notify-send us
+else
+    setxkbmap br
+    notify-send br
+fi
