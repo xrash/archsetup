@@ -36,3 +36,5 @@ After that, you should manually get your graphics card driver running. Tips from
         ln -s /var/www /home/$username/www
 
 - Add the LOTGH fortune file :D
+
+- Add the /etc/modules-load.d/virtualbox.conf
