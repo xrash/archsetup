@@ -7,8 +7,8 @@ CURDIR=$(pwd)
 
 if [ ! -f "$(which puppet)" ]
 then
-    pacman -S base-devel --noconfirm
-    pacman -S wget --noconfirm
+    pacman -Syy base-devel --noconfirm
+    pacman -Syy wget --noconfirm
 
     which yaourt > /dev/null
     if test "$?" = 1; then
@@ -28,7 +28,7 @@ then
 	echo EDITFILES=0 >> /etc/yaourtrc
     fi
 
-    yaourt -S puppet --noconfirm
+    yaourt -Syy puppet --noconfirm
 fi
 
 cd $CURDIR

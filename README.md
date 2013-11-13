@@ -4,7 +4,7 @@ After a proper Arch Linux install with internet connection up, install packages 
 
     pacman -S --noconfirm git openssh
 
-Now, run as user **root** at **/root**:
+Now, run as user **root**:
 
     git clone https://github.com/xrash/archsetup.git
 	cd archsetup
