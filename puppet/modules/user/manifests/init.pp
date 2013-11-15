@@ -13,9 +13,17 @@ class user {
     line => "$username ALL=(ALL) ALL",
   }
 
+  file { 'sshdir':
+    path  => "/home/$username/.ssh",
+    owner => $username,
+    group => $username,
+    require => User[$username],
+  }
+  
   exec { 'ssh-keygen':
     command => "ssh-keygen -t rsa -C '$email' -N '' -f '/home/$username/.ssh/id_rsa'",
     creates => "/home/$username/.ssh",
-    require => User[$username],
+    user    => $username,
+    require => File['sshdir'],
   }
 }
