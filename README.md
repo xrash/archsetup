@@ -1,8 +1,8 @@
 # My Arch Linux automatic setup
 
-After a proper Arch Linux install with internet connection up, install packages **git** and **openssh**:
+After a proper Arch Linux install with internet connection up, install package **git**:
 
-    pacman -S --noconfirm git openssh
+    pacman -S --noconfirm git
 
 Now, run as user **root**:
 
@@ -26,15 +26,9 @@ After that, you should manually get your graphics card driver running. Tips from
         amixer set Master unmute
 	    amixer set Master 100
 
-- Disable bitmap fonts for X (bitmap fonts are ugly):
-
-        ln -s /etc/fonts/conf.avail/70-no-bitmaps.conf /etc/fonts/conf.d/
-
-- Add the http group to **$username** and symlink **/var/www** to **/home/$username/www**:
+- Add the group **http** to **$username** and symlink **/var/www** to **/home/$username/www**:
 
         usermod $username -a -G http
         ln -s /var/www /home/$username/www
 
 - Add the LOTGH fortune file :D
-
-- Add the /etc/modules-load.d/virtualbox.conf

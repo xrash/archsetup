@@ -35,4 +35,14 @@ class system {
     mode   => 0755,
     source => 'puppet:///modules/system/switch-keyboard-layout',
   }
+  
+  file { '/etc/fonts/conf.d/70-no-bitmaps.conf':
+    ensure => 'link',
+    target => '/etc/fonts/conf.avail/70-no-bitmaps.conf',
+  }
+  
+  file { '/etc/modules-load.d/virtualbox.conf':
+    ensure => 'present',
+    source => 'puppet:///modules/system/virtualbox.conf',
+  }
 }
