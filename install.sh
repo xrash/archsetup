@@ -37,7 +37,6 @@ export FACTER_username=$USERNAME
 export FACTER_email=$EMAIL
 
 if test "$(puppet module --modulepath=./puppet/modules list | grep stdlib)" = ""; then
-    puppet module --modulepath=./puppet/modules install maestrodev/ssh_keygen
     puppet module --modulepath=./puppet/modules install puppetlabs/vcsrepo
     puppet module --modulepath=./puppet/modules install puppetlabs/stdlib
 fi

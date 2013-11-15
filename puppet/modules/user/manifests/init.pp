@@ -12,8 +12,10 @@ class user {
     path => '/etc/sudoers',
     line => "$username ALL=(ALL) ALL",
   }
-  
-  ssh_keygen { $username:
+
+  exec { 'ssh-keygen':
+    command => "ssh-keygen -t rsa -C '$email' -N '' -f '/home/$username/.ssh/id_rsa'",
+    creates => "/home/$username/.ssh",
     require => User[$username],
   }
 }
