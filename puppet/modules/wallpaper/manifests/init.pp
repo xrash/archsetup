@@ -12,6 +12,7 @@ class wallpaper {
   exec { 'download-zip':
     command => "wget https://copy.com/6a6ffUml4INM/wallpapers?download=1 -O /tmp/wallpapers.zip",
     onlyif  => "test $(find /home/$username/copy/wallpapers -name *.jpg | wc -l) -eq 0",
+    timeout => 3600,
     require => File["/home/$username/copy"],
   }
   
