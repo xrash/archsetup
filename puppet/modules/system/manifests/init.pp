@@ -1,5 +1,5 @@
 class system {
-  include multilib
+  require packages
   
   file_line { 'kenshin':
     ensure => 'present',
@@ -45,4 +45,7 @@ class system {
     ensure => 'present',
     source => 'puppet:///modules/system/virtualbox.conf',
   }
+
+  exec { 'amixer set Master unmute': }
+  exec { 'amixer set Master 100': }
 }
