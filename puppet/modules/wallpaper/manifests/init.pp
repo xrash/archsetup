@@ -19,7 +19,7 @@ class wallpaper {
   exec { "unzip":
     command => "unzip /tmp/wallpapers.zip -d /home/$username/copy",
     onlyif  => "test $(find /home/$username/copy/wallpapers -name *.jpg | wc -l) -eq 0",
-    timeout => 2400,
+    timeout => 3600,
     require => [ Exec['download-zip'] ]
   }
 
