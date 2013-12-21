@@ -28,3 +28,7 @@ After that, you should manually get your graphics card driver running. Tips from
         ln -s /var/www /home/$username/www
 
 - Setup my newsbeuter :3
+
+- Setup PHP, PHP-FPM, systemd and stuff... or just forget about it
+
+- Root .bash and aliases same as user's.
