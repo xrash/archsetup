@@ -12,3 +12,4 @@ include nginx
 include wallpaper
 include rat
 include fortune
+include newsbeuter
