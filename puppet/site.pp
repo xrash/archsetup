@@ -13,3 +13,4 @@ include wallpaper
 include rat
 include fortune
 include newsbeuter
+include conclusion

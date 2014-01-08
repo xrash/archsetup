@@ -23,10 +23,4 @@ class go {
     environment => "GOPATH=/home/$username/go",
     require     => File['gopath'],
   }
-
-  exec { 'fix-permissions':
-    command     => "chown $username:$username /home/$username/go -R",
-    unless      => "test $(stat -c %U /home/$username/go) = $username",
-    require     => [ Exec['get-gonf'], Exec['get-domi'] ],
-  }
 }
