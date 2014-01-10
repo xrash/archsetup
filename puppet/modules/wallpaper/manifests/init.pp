@@ -22,10 +22,4 @@ class wallpaper {
     timeout => 3600,
     require => [ Exec['download-zip'] ]
   }
-
-  exec { "permissions":
-    command => "chown $username:$username /home/$username/copy -R",
-    unless  => "test $(stat -c %U /home/$username/copy/wallpapers/wallpapers.zip) = $username",
-    require => Exec['unzip'],
-  }
 }
