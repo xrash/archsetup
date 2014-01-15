@@ -1,4 +1,4 @@
-class openbox {
+class i3 {
   require user
 
   file { "/home/$username/.xinitrc":
