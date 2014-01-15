@@ -5,12 +5,13 @@ Exec {
 include packages
 include user
 include emacs
-include openbox
 include system
 include go
 include nginx
-include wallpaper
 include rat
 include fortune
 include newsbeuter
+include wallpaper
+# include openbox
+include i3
 include conclusion

@@ -4,9 +4,10 @@ class conclusion {
   require go
   require newsbeuter
   require fortune
-  require openbox
-  require wallpaper
   require emacs
+#  require openbox
+  require wallpaper
+  require i3
 
   exec { 'fix-permissions':
     command => "chown $username:$username /home/$username -R",
