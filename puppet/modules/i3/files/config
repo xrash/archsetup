@@ -10,7 +10,7 @@ exec --no-startup-id nitrogen --restore
 exec /usr/lib/notify-osd/notify-osd
 
 # get happy
-echo "Welcome back, Commander." | flite
+exec echo "Welcome back, Commander." | flite
 
 # keyboard layout
 bindsym $alt+q exec switch-keyboard-layout
