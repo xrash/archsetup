@@ -7,10 +7,10 @@ set $super Mod4
 exec --no-startup-id nitrogen --restore
 
 # start the notify-osd daemon
-exec /usr/lib/notify-osd/notify-osd
+exec --no-startup-id /usr/lib/notify-osd/notify-osd
 
 # get happy
-exec echo "Welcome back, Commander." | flite
+exec --no-startup-id echo "Welcome back, Commander." | flite
 
 # keyboard layout
 bindsym $alt+q exec switch-keyboard-layout
@@ -104,10 +104,10 @@ bindsym $super+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit short
 mode "resize" {
         # These bindings trigger as soon as you enter the resize mode
 
-        # Pressing left will shrink the window’s width.
-        # Pressing right will grow the window’s width.
-        # Pressing up will shrink the window’s height.
-        # Pressing down will grow the window’s height.
+        # Pressing left will shrink the window s width.
+        # Pressing right will grow the window s width.
+        # Pressing up will shrink the window s height.
+        # Pressing down will grow the window s height.
         bindsym j resize shrink width 10 px or 10 ppt
         bindsym k resize grow height 10 px or 10 ppt
         bindsym l resize shrink height 10 px or 10 ppt
