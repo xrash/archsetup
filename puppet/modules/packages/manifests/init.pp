@@ -2,7 +2,7 @@ class packages {
   include multilib
 
   exec { 'pacman':
-    command => 'pacman -Syy --noconfirm --noprogressbar git feh xorg-server xorg-xinit sudo skype firefox filezilla rlwrap openssh python ruby clisp sbcl apache php bash-completion xfce4-terminal emacs nginx nitrogen fuse go unzip xorg-fonts-type1 flashplugin alsa-tools dialog wpa_supplicant xclip xsel apache-ant markdown icedtea-web-java7 notify-osd virtualbox virtualbox-host-modules irssi fortune-mod mercurial htop newsbeuter evince i3 cdrtools',
+    command => 'pacman -Syy --noconfirm --noprogressbar git feh xorg-server xorg-xinit sudo skype firefox filezilla rlwrap openssh python ruby clisp sbcl apache php bash-completion xfce4-terminal emacs nginx nitrogen fuse go unzip xorg-fonts-type1 flashplugin alsa-tools dialog wpa_supplicant xclip xsel apache-ant markdown icedtea-web-java7 notify-osd virtualbox virtualbox-host-modules irssi fortune-mod mercurial htop newsbeuter evince i3 cdrtools dnsutils',
     timeout => 3600,
     require => Exec['multilib'],
   }
