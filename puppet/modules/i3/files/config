@@ -9,13 +9,19 @@ exec --no-startup-id nitrogen --restore
 # start the notify-osd daemon
 exec --no-startup-id /usr/lib/notify-osd/notify-osd
 
+# dual head
+exec_always --no-startup-id xrandr --output VGA1 --auto --above LVDS1
+
 # get happy
-exec --no-startup-id echo "Welcome back, Commander." | flite
+# exec --no-startup-id echo "Welcome back, Commander." | flite
 
 # keyboard layout
 bindsym $alt+q exec switch-keyboard-layout
 bindsym XF86AudioLowerVolume exec amixer set Master 5%- unmute
 bindsym XF86AudioRaiseVolume exec amixer set Master 5%+ unmute
+
+# lock screen
+bindsym $super+l exec i3lock -i $(cat .config/nitrogen/bg-saved.cfg | grep file | head -n 1 | cut -d "=" -f 2)
 
 # font for window titles and the status bar
 font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
@@ -29,7 +35,7 @@ bindsym $super+Return exec i3-sensible-terminal
 bindsym $ctrl+space exec i3-sensible-terminal
 
 # kill focused window
-bindsym $super+Shift+q kill
+bindsym $super+q kill
 
 # change focus
 bindsym $super+Left focus left
