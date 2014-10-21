@@ -12,6 +12,6 @@ include rat
 include fortune
 include newsbeuter
 include wallpaper
-# include openbox
 include i3
+include smuxi
 include conclusion

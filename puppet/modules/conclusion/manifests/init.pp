@@ -5,7 +5,6 @@ class conclusion {
   require newsbeuter
   require fortune
   require emacs
-#  require openbox
   require wallpaper
   require i3
 
