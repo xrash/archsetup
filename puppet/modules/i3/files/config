@@ -21,7 +21,7 @@ bindsym XF86AudioLowerVolume exec amixer set Master 5%- unmute
 bindsym XF86AudioRaiseVolume exec amixer set Master 5%+ unmute
 
 # lock screen
-bindsym $super+l exec i3lock -i $(cat .config/nitrogen/bg-saved.cfg | grep file | head -n 1 | cut -d "=" -f 2)
+bindsym $super+l exec convert $(cat .config/nitrogen/bg-saved.cfg | grep file | tail -n 1 | cut -d "=" -f 2) /home/rash/locked.png && i3lock -i /home/rash/locked.png
 
 # font for window titles and the status bar
 font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
